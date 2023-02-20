@@ -25,5 +25,5 @@ function ej4(){
 	//Apartado 5
 	let num =valores[5];
 	let num1= valores[1];
-	document.write("2^5= "+(num**=num1))
+	document.write("2^5= "+(num**=num1));
 }
