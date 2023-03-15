@@ -1,5 +1,4 @@
 
-function ej1(){
 	class Segmento{
 		constructor (a,b){
 			this.a=prompt("Indique cual es el punto inicial del segmento");
@@ -13,4 +12,3 @@ function ej1(){
 
 	let Seg=new Segmento();
 	console.log("La distancia del segmento es de "+Seg.calculoLongSeg()+" cm.");
-}
