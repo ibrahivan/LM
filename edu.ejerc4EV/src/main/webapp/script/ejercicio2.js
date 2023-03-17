@@ -17,14 +17,14 @@ document.write("Ancho: "+pol.ancho+" cm<br>");
 
 class Cuadrado extends Poligono{
 	constructor(lado){
-		super();
+		super(lado,lado);
 		this.nombre="Cuadrado";	
 	}
 	calculoArea(){
-		return pol.altura*pol.ancho;
+		return this.altura*this.ancho;
 	}
-	
+
 }
-let cua= new Cuadrado();
+let cua= new Cuadrado(20);
 document.write("Área= "+cua.calculoArea()+" cm^2.");
 
