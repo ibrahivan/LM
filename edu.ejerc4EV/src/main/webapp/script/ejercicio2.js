@@ -12,8 +12,8 @@ class Poligono{
 
 let pol = new Poligono(100,200);
 console.log("Nombre: "+pol.devuelveNombre());
-document.write("Altura: "+pol.altura+" cm<br>");
-document.write("Ancho: "+pol.ancho+" cm<br>");
+document.write("Altura polígono: "+pol.altura+" cm<br>");
+document.write("Ancho polígono: "+pol.ancho+" cm<br>");
 
 class Cuadrado extends Poligono{
 	constructor(lado){
@@ -25,6 +25,6 @@ class Cuadrado extends Poligono{
 	}
 
 }
-let cua= new Cuadrado(20);
-document.write("Área= "+cua.calculoArea()+" cm^2.");
+var cua= new Cuadrado(20);
+document.write("Área cuadrado= "+cua.calculoArea()+" cm^2.");
 
