@@ -1,15 +1,16 @@
+var listaAlumnos = [];
 function Menu() {
-	var listaAlumnos = [];
+	
 
 	let opcion;
-	do {
-		opcion = prompt("[Prestamos]\n1. Matrícula de alumno\n2. Borrar alumno\n3. Listar alumnos\n0. Salir");
 
+		opcion = prompt("1. Matrícula de alumno\n2. Borrar alumno\n3. Listar alumnos\n0. Salir");
+		
 		while (opcion != "0" && opcion != "1" && opcion != "2" && opcion != "3") {
 			alert("[Error] Introduzca una opción válida: ");
-			opcion = prompt("[Prestamos]\n1. Matrícula de alumno\n2. Borrar alumno\n3. Listar alumnos\n0. Salir");
+			opcion = prompt("1. Matrícula de alumno\n2. Borrar alumno\n3. Listar alumnos\n0. Salir");
 		}
-
+		
 		switch (opcion) {
 			case "1":
 				AlumnoPort.añadirAlumno(listaAlumnos);
@@ -18,10 +19,11 @@ function Menu() {
 				AlumnoPort.eliminarAlumno(listaAlumnos);
 				break;
 			case "3":
+				
 				AlumnoPort.listarAlumnos(listaAlumnos);
+				
 				break;
 		}
-	} while (opcion != "0");
 }
 
 class AlumnoPort {
@@ -90,9 +92,12 @@ class AlumnoPort {
 	}
 
 	static listarAlumnos(listaAlumnos) {
-		if (listaAlumnos.length != 0)
+		if (listaAlumnos.length != 0){
 			for (let i = 0; i < listaAlumnos.length; i++)
-				alert(JSON.stringify(listaAlumnos[i]));
+				document.write(JSON.stringify((listaAlumnos[i])));
+			document.write("<br><button onclick=\"Menu()\">Menú de la aplicacion (Pulsar para realizar otra funcion)</button><br><hr>")
+			
+		}
 		else
 			alert("[Error] No existe información para listar.");
 	}
