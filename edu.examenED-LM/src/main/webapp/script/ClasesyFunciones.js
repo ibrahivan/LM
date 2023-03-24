@@ -74,7 +74,7 @@ class AlumnoPort {
 		let idAlum= this.calculoIdAlumno(listaAlumnos);
 		let idPortatil= this.concatenacionMarcaModelo(marca,modelo);
 		//Creo en objeto con los nuevos parametros
-		var alumport = new AlumnoPort(nombre,apellidos,telefono,marca,modelo,idAlum,idPortatil);
+		var alumport = new AlumnoPort(idAlum,nombre,apellidos,telefono,idPortatil,marca,modelo);
 		//le paso a la lista el objeto
 		alumport.idAlum= listaAlumnos.length + 1;
 		listaAlumnos.push(alumport);
@@ -94,7 +94,7 @@ class AlumnoPort {
 	static listarAlumnos(listaAlumnos) {
 		if (listaAlumnos.length != 0){
 			for (let i = 0; i < listaAlumnos.length; i++)
-				document.write(JSON.stringify((listaAlumnos[i])));
+				document.write(JSON.stringify((listaAlumnos[i]))); 
 			document.write("<br><button onclick=\"Menu()\">Menú de la aplicacion (Pulsar para realizar otra funcion)</button><br><hr>")
 			
 		}
