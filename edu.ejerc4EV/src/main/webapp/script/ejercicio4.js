@@ -1,4 +1,4 @@
-function ej10(){
+function ej4(){
 	let categoria=prompt("Introduzca alguna de estas categorias para aplicarle su descuento.\n1. Camisetas.\n2. Pantalones.\n3. Ropa interior.\n4. Chaquetones.\n5. Otra");
 	var precio, desc;
 	if (categoria==1)

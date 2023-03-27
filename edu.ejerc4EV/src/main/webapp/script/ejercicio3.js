@@ -1,4 +1,4 @@
-function ej9(){
+function ej3(){
 	let edad = prompt("Introduzca su edad: ");
 	if (edad<1||edad>100)
 		alert("**ERROR** La edad no puede ser menor de 1 ni mayor de 100.");
