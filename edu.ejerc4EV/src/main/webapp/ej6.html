@@ -14,10 +14,15 @@
     <br>
     <br>
     </form>
-   <form name="calcularPorcentaje">
-        Escribe un valor al cual se le calculará el 30%:
-        <input type="text" size="200" name="valor" value="Introduce un valor"/>
-        <input type="button" name="calcular" value="calcular" onclick="porciento()"/>
+   <form name="calculadoraFalsa">
+        Escribe una operacion:
+        <input type="text" size="200" name="valor" value="Introduce una operacion"/> <!-- en el javascript cojo este valor del formulario -->
+        <input type="button" name="calcular" value="Calcular" onclick="operar(this.form)"/>
+        <br>
+        <br>
+        <input type="text" size="200" name="resultado" value=""/>
+        <input type="reset" name="resetear"  value="Resetear"/>
+        
     </form>
 </body>
 </html>
