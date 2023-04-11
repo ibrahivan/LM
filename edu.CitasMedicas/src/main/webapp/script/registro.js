@@ -1,12 +1,21 @@
 var datUsu=[];
+const medicos=["Ana García","María Fernández","Laura Torres","Luis González","Javier Rodríguez","Miguel Martínez"];
+const centros=["Hospital Virgen del Rocío","Hospital Quirón Sagrado Corazón","Hospital Virgen Macarena","Hoapital de San Lázaro"];
+
+// Obtenemos un índice aleatorio de los arrays
+const indiceMedicos = Math.floor(Math.random() * medicos.length);
+const indiceCentros = Math.floor(Math.random() * centros.length);
+
 class Usuario {
-  constructor(nombre, apellidos, edad, telefono, direccion,idUsu) {
+  constructor(nombre, apellidos, edad, telefono, direccion,idUsu, medico, centro) {
     this.nombre = nombre;
     this.apellidos = apellidos;
     this.edad = edad;
     this.telefono = telefono;
     this.direccion = direccion;
     this.idUsu=idUsu;
+    this.medico=medico;
+    this.centro=centro;
     }
       static calculoIdUsuario(datUsu) {
 		let auxiliar = 0;
@@ -57,8 +66,11 @@ function listarUsu() {
         usuario.direccion +
         "<br/>Id Usuario: " +
         usuario.idUsu +
-        "<hr/><br>" ;
-  });
-
+        "<br/>Médico: " +
+        usuario.medico +
+        "<br/>Centro medico: " +
+        usuario.centro +
+        "<hr/><br>"
+        });
 }
 
