@@ -1,19 +1,19 @@
 var datUsu=[];
 const medicos=["Ana García","María Fernández","Laura Torres","Luis González","Javier Rodríguez","Miguel Martínez"];
-const centros=["Hospital Virgen del Rocío","Hospital Quirón Sagrado Corazón","Hospital Virgen Macarena","Hoapital de San Lázaro"];
+const centros=["Hospital Virgen del Rocío","Hospital Quirón Sagrado Corazón","Hospital Virgen Macarena","Hospital de San Lázaro"];
 
-// Obtenemos un índice aleatorio de los arrays
+  // Obtenemos un índice aleatorio de los arrays
 const indiceMedicos = Math.floor(Math.random() * medicos.length);
 const indiceCentros = Math.floor(Math.random() * centros.length);
 
 class Usuario {
-  constructor(nombre, apellidos, edad, telefono, direccion,idUsu, medico, centro) {
+  constructor(nombre, apellidos, edad, telefono, direccion, medico, centro) {
     this.nombre = nombre;
     this.apellidos = apellidos;
     this.edad = edad;
     this.telefono = telefono;
     this.direccion = direccion;
-    this.idUsu=idUsu;
+    this.idusuario;
     this.medico=medico;
     this.centro=centro;
     }
@@ -38,10 +38,14 @@ function registrarUsu() {
   let edad = prompt("Introduzca su edad");
   let telefono = prompt("Introduzca su teléfono");
   let direccion = prompt("Introduzca su dirección");
+  let medico= medicos[indiceMedicos];
+  let centro= centros[indiceCentros];
+
+
 
   if (nombre && apellidos && !isNaN(edad) && !isNaN(telefono)) {
-    let usu = new Usuario(nombre, apellidos, edad, telefono, direccion);
-    usu.idUsu= datUsu.length + 1;
+    let usu = new Usuario(nombre, apellidos, edad, telefono, direccion,medico,centro);
+    usu.idusuario= datUsu.length + 1;
     datUsu.push(usu);
   } else {
     alert("Por favor, llene todos los campos y use números para la edad y el teléfono.");
