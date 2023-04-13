@@ -4,42 +4,23 @@
 <meta charset="UTF-8">
 <title>Pagina principal</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css/boton1.css">
 
+<link rel="stylesheet" href="css/estilo.css">
 <script src="script/registro.js"></script>
-</head>
-  <body>
-  <h1>Agenda de citas médicas</h1>
-  <form id="form-registro">
-    <h2>Registro de usuario</h2>
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required>
-    <br>
-    <label for="apellidos">Apellidos:</label>
-    <input type="text" id="apellidos" name="apellidos" required>
-    <br>
-    <label for="edad">Edad:</label>
-    <input type="number" id="edad" name="edad" required>
-    <br>
-    <label for="telefono">Teléfono:</label>
-    <input type="number" id="telefono" name="telefono" required>
-    <br>
-    <label for="direccion">Dirección:</label>
-    <input type="text" id="direccion" name="direccion" required>
-    <br>
-    <button type="button" onclick="registrarUsuario()">Registrar</button>
-  </form>
-  <br>
-  <h2>Listado de citas</h2>
-  <div id="listado-citas"></div>
-  <button type="button" id="citas" onclick="listarCitas()">Listar cita</button>
 
-  <br>
-  <h2>Eliminar cita</h2>
-  <div id="eliminar-citas"></div>
-  <button type="button" onclick="eliminarCita()">Listar cita</button>
+<title>Lista de Citas Médicas</title>
 	
-    
-  </body>
+</head>
+<body>
+	<h1>Lista de Citas Médicas</h1>
+
+	
+	<button onclick="crearCitaMedica()" class="btn-gradient">Crear Nueva Cita</button>
+	<br><br>
+	<button onclick="borrarCitas()" class="btn-gradient">Listar citas</button>
+	
+
+
+</body>
 </html>
 

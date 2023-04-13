@@ -1,0 +1,31 @@
+
+.btn-gradient {
+  background: linear-gradient(to bottom right, #ff69b4, #ff6347);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-gradient:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+}
+
+body{
+	font-family: monospace;
+	font-size-adjust: 20px;
+	color:white;
+	background-image: url('https://thumbs.dreamstime.com/b/el-doctor-muestra-icono-de-las-llamadas-del-centro-m%C3%A9dico-99699385.jpg');
+  	background-size: cover;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	overflow-y: scroll;
+  	background-color: rgba(0, 0, 0, 0.8);
+  	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://thumbs.dreamstime.com/b/el-doctor-muestra-icono-de-las-llamadas-del-centro-m%C3%A9dico-99699385.jpg');
+	
+}
